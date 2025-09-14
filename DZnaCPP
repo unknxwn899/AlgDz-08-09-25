@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Задача 1
+    string str = "AaBbCcDd";
+    string upper, lower;
+    for (int i = 0; i < str.length(); i += 2) {
+        upper += str[i];
+        if (i + 1 < str.length()) {
+            lower += str[i + 1];
+        }}
+    cout << "Zaglavnye: " << upper << endl;
+    cout << "Strochnye: " << lower << endl << endl;
+    
+    // Задача 2
+    vector<string> list = {"a", "1", "b", "2", "c", "3"};
+    vector<string> letters, numbers;
+    for (int i = 0; i < list.size(); i += 2) {
+        letters.push_back(list[i]);
+        if (i + 1 < list.size()) {
+            numbers.push_back(list[i + 1]);
+        }}
+    list.clear();    
+    cout << "Bykvyy: ";
+    for (const auto& item : letters) {
+        cout << item << " ";}
+    cout << "\nChisla: ";
+    for (const auto& item : numbers) {
+        cout << item << " ";} 
+    return 0;
+}
